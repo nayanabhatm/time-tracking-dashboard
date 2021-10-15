@@ -82,6 +82,10 @@ nav > * {
   color: white;
 }
 
+.nav-item {
+  user-select: none;
+}
+
 /* Items  */
 .item {
   display: flex;
@@ -177,13 +181,13 @@ nav > * {
 @media all and (min-width: 1000px) {
   body {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    overflow: hidden;
+    grid-template-columns: repeat(2, auto);
+    margin: 10% 15%;
   }
 
   main {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* header */
@@ -195,16 +199,25 @@ nav > * {
     padding: 3%;
   }
 
-  .person-details {
+  header .person-details {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header img {
+    width: 15%;
+    margin: 3% 0;
   }
 
   /* navbar */
   nav {
     flex-direction: column;
     justify-content: space-evenly;
-    height: 25%;
+  }
+
+  nav > * {
+    margin: 3% 0;
   }
 
   /* Items */
